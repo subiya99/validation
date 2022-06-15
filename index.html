@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script
+ src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script
+ src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+<link rel="stylesheet"
+ href="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <form id="form" class="form"  value="click me" onclick="ShowDiv()" >
+      <h2>Add Customers</h2>
+      <div class="form-control">
+        <label for="firstname">First Name</label>
+        <input type="text" id="firstname" placeholder="Enter firstname" pattern="[a-zA-Z'-'\s]*" required/>
+        <small>Error Message</small>
+      </div>
+      <div class="form-control">
+        <label for="lastname">Last Name</label>
+        <input type="text" id="lastname" placeholder="Enter lastname" pattern="[a-zA-Z'-'\s]*" required/>
+        <small>Error Message</small>
+      </div>
+      <div class="form-control">
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="Enter username" pattern="[a-zA-Z'-'\s]*" required/>
+        <small>Error Message</small>
+      </div>
+      <div class="form-control">
+        <label for="email">Email</label>
+        <input type="text" id="email" placeholder="Enter email" required />
+        <small>Error Message</small>
+      </div>
+      <div class="form-control">
+        <label for="designation">Designation</label>
+        <input type="text" id="designation" placeholder="Enter username" pattern="[a-zA-Z'-'\s]*" required />
+        <small>Error Message</small>
+      </div>
+      <div class="form-control">
+        <label for="phonenumber">Phone Number</label>
+        <input type="text" id="phonenumber" placeholder="Enter phonenumber" required />
+        <small>Error Message</small>
+      </div>
+      <div class="form-control">
+        <label for="address">Address</label>
+        <input type="text" id="address" placeholder="Enter address" required />
+        <small>Error Message</small>
+      </div>
+      <div class="form-control">
+        <label for="city">City</label>
+        <input type="text" id="city" placeholder="Enter city" pattern="[a-zA-Z'-'\s]*" required />
+        <small>Error Message</small>
+      </div>
+      <div class="form-control">
+        <label for="state">State</label>
+        <input type="text" id="state" placeholder="Enter state" pattern="[a-zA-Z'-'\s]*" required/>
+        <small>Error Message</small>
+      </div>
+      <div class="form-control">
+        <label for="zip">Zip</label>
+        <input type="text" id="zip" placeholder="Enter zip code" pattern="\d*" maxlength="6" required />
+        <small>Error Message</small>
+      </div>
+      <button type="submit" onclick="myFunction()" >Submit</button>
+      <button onclick="showAlert()">Finalize</button>
+    </form>
+  </div>
+  <script src="script.js"></script>
+  <script>
+    function myFunction() {
+        toastr.options = {
+              "positionClass" : "toast-top-center",
+              "closeButton" : false,
+              "debug" : false,
+              "newestOnTop" : false,
+              "progressBar" : true,
+              "preventDuplicates" : false,
+              "onclick" : null,
+              "showDuration" : "300",
+              "hideDuration" : "1000",
+              "timeOut" : "5000",
+              "extendedTimeOut" : "1000",
+              "showEasing" : "swing",
+              "hideEasing" : "linear",
+              "showMethod" : "fadeIn",
+              "hideMethod" : "fadeOut"
+             }
+       Command: toastr["success"]
+               ("Submitted Successfully...!")
+    
+    }
+    </script>
+</body>
+</html>
